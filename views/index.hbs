@@ -1,0 +1,37 @@
+<div class="block">
+  <div class="block__header">
+    Get Discord Token
+  </div>
+  <div class="block__body">
+    {{#if login}}
+      <a href="/api/discord/login" class="login_button">Login through Discord</a>
+    {{else}}
+      <div class="success">
+        <div class="success__header">
+          Your token
+        </div>
+        <div class="success__data">
+          {{ userToken }}
+        </div>
+        <div class="success__header">
+          Scope
+        </div>
+        <div class="success__data">
+          Username: {{ userData.username }}<br>
+          Locale: {{ userData.locale }}<br>
+          ID: {{ userData.id }}<br>
+          Avatar: {{ userData.avatar }}<br>
+          Discriminator: {{ userData.discriminator }}<br>
+          Email: {{ userData.email }}
+        </div>
+      </div>
+      <a href="/api/discord/logout" class="logout_button">Logout</a>
+    {{/if}}    
+  </div>
+  <div class="block__footer">
+    This website is not affiliated with <a href="https://discordapp.com">discord inc.</a>
+  </div>
+  <div class="block__footer">
+    I do not save anything. <a href="https://github.com/lucasctrl/discord_oauth_expressjs">See sources</a>
+  </div>
+</div>
