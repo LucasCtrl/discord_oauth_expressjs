@@ -13,7 +13,7 @@ const CLIENT_SECRET = config.CLIENT_SECRET
 const redirect = encodeURIComponent('http://localhost:8080/api/discord/callback')
 
 router.get('/login', (req, res) => {
-  res.redirect(`https://discordapp.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${redirect}&response_type=code&scope=identify`)
+  res.redirect(`https://discordapp.com/api/oauth2/authorize?client_id=${CLIENT_ID}&redirect_uri=${redirect}&response_type=code&scope=identify%20email`)
 })
 
 router.get('/logout', (req, res) => {
